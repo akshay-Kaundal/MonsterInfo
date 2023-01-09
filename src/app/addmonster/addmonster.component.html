@@ -1,15 +1,15 @@
-<h3>Add Monster</h3>
+<h2 align="center">Add Monster</h2>
 <form [formGroup]="addMonsterForm" (ngSubmit)="addMonsterDetail()">
-    <table border="1">
+    <table border="1"  align="center">
         <tr>
-            <td>Name: </td>
-            <td><input type="text" name="name" placeholder="Your Name" formControlName="name"></td>
-            <td *ngIf="addMonsterForm.controls['name'].invalid && addMonsterForm.controls['name'].touched">*Please Enter Name</td>
+            <td width="150px">Name: </td>
+            <td width="100px"><input type="text" name="name" placeholder="Your Name" formControlName="name"></td>
+            <td width="250px" *ngIf="addMonsterForm.controls['name'].invalid && addMonsterForm.controls['name'].touched">*Please Enter Name</td>
         </tr>
         <tr>
             <td>UserName: </td>
             <td><input type="text" name="userName" placeholder="Your username" formControlName="userName"></td>
-            <td *ngIf="addMonsterForm.controls['userName'].invalid && addMonsterForm.controls['userName'].touched">*Please enter username</td>
+            <td width="100px" *ngIf="addMonsterForm.controls['userName'].invalid && addMonsterForm.controls['userName'].touched">*Please enter username</td>
         </tr>
         <tr>
             <td>Email Address: </td>
@@ -44,7 +44,9 @@
         <tr>
             <td colspan="3" align="left"><input type="submit" value="Send"></td>
         </tr>
+        <br>
+        <tr>
+            <td class="3"><a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Go back to home</a></td>
+        </tr>
     </table>
-    <br>
-    <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Go back to home</a>
 </form>
