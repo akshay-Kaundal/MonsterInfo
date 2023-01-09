@@ -1,0 +1,39 @@
+<h3>Monster Details</h3>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>{{monsterInfo.id}}</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>{{monsterInfo.name}}</td>
+    </tr>
+    <tr>
+        <td>UserName</td>
+        <td>{{monsterInfo.username}}</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>{{monsterInfo.email}}</td>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <td>{{monsterInfo.address.street}},{{monsterInfo.address.suite}}, {{monsterInfo.address.city}}, {{monsterInfo.address.zipcode}} </td>
+    </tr>
+    <tr>
+        <td>Phone</td>
+        <td>{{monsterInfo.phone}}</td>
+    </tr>
+    <tr>
+        <td>Website</td>
+        <td>{{monsterInfo.website}}</td>
+    </tr>
+    <tr>
+        <td>Company</td>
+        <td>{{monsterInfo.company.name}}</td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+    </tr>
+</table>
+    <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Go back to home</a>

@@ -1,0 +1,50 @@
+<h3>Add Monster</h3>
+<form [formGroup]="addMonsterForm" (ngSubmit)="addMonsterDetail()">
+    <table border="1">
+        <tr>
+            <td>Name: </td>
+            <td><input type="text" name="name" placeholder="Your Name" formControlName="name"></td>
+            <td *ngIf="addMonsterForm.controls['name'].invalid && addMonsterForm.controls['name'].touched">*Please Enter Name</td>
+        </tr>
+        <tr>
+            <td>UserName: </td>
+            <td><input type="text" name="userName" placeholder="Your username" formControlName="userName"></td>
+            <td *ngIf="addMonsterForm.controls['userName'].invalid && addMonsterForm.controls['userName'].touched">*Please enter username</td>
+        </tr>
+        <tr>
+            <td>Email Address: </td>
+            <td><input type="text" name="email" placeholder="Your Email" formControlName="email"></td>
+            <td *ngIf="addMonsterForm.controls['email'].invalid && addMonsterForm.controls['email'].touched" 
+            class="error-msg">*Please Enter Valid email Id</td>
+        </tr>
+        <tr>
+            <td>Address: </td>
+            <td><input type="text" name="address" placeholder="Your address" formControlName="address"></td>
+            <td *ngIf="addMonsterForm.controls['address'].invalid && addMonsterForm.controls['address'].touched" 
+            class="error-msg">*Please enter address</td>
+        </tr>
+        <tr>
+            <td>Phone: </td>
+            <td><input type="text" name="phone" placeholder="Your phone" formControlName="phone"></td>
+            <td *ngIf="addMonsterForm.controls['phone'].invalid && addMonsterForm.controls['phone'].touched"
+                class="error-msg">*Please enter phone number</td>
+        </tr>
+        <tr>
+            <td>Website: </td>
+            <td><input type="text" name="website" placeholder="Your website" formControlName="website"></td>
+            <td *ngIf="addMonsterForm.controls['website'].invalid && addMonsterForm.controls['website'].touched"
+                class="error-msg">*Please enter your website</td>
+        </tr>
+        <tr>
+            <td>Company: </td>
+            <td><input type="text" name="company" placeholder="Your company" formControlName="company"></td>
+            <td *ngIf="addMonsterForm.controls['company'].invalid && addMonsterForm.controls['company'].touched" 
+                class="error-msg">*Please enter your comany name</td>
+        </tr>
+        <tr>
+            <td colspan="3" align="left"><input type="submit" value="Send"></td>
+        </tr>
+    </table>
+    <br>
+    <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Go back to home</a>
+</form>

@@ -1,0 +1,10 @@
+<!-- <div style="background-color: teal;"> -->
+    <div>
+        <a [routerLink]="['/detail',detail.id]" routerLinkActive="active" ariaCurrentWhenActive="page"><img [src]="imageToShow"/></a>
+    
+
+        {{detail.name}}
+        <br>
+        {{detail.email |loweremail}}
+</div>
+

@@ -1,0 +1,36 @@
+Filter Monster by name: 
+<!-- <app-addmonster></app-addmonster> -->
+<!-- <app-monsterdetail></app-monsterdetail> -->
+<input type="text" [(ngModel)]="filterBy" (ngModelChange)="filterByDebounce()">
+<br>
+<br>
+<div style="background-color:azure">
+    <ng-container>
+        <div class="grid" display="grid">
+            <ng-container *ngFor="let monsterDet of (monsterDetails | async) | filter: filterWithDebounce: 'name'">
+                <!-- <app-monstercard  [detail]="monsterDet"></app-monstercard> -->
+                <div style="border: 1ch;"><app-monstercard  [detail]="monsterDet"></app-monstercard></div>
+                <!-- hiiiiiiii -->
+            </ng-container>        
+        </div>
+    </ng-container>
+</div>
+<!-- <ol>
+    <li *ngFor="let user of monsterDetails">{{user.name}}</li>
+</ol> -->
+<!-- <div *ngFor="let monsterDet of (monsterDetails | async) | filter: filterWithDebounce: 'name' let i=index">
+
+</div> -->
+<!-- <table border="2"  *ngFor="let monsterDet of (monsterDetails | async) | filter: filterWithDebounce: 'name' let i=index">
+        <tr *ngIf="i%4 == 0"></tr>
+        <tr>
+            <td><app-monstercard [detail]="monsterDet"></app-monstercard></td>
+        </tr>
+</table> -->
+<!-- <ng-container style="background-color: aqua;" *ngFor="let monsterDet of (monsterDetails | async) | filter: filterWithDebounce: 'name'; let i=index">
+    <div style="background-color: blue;" *ngIf="i%4 == 0"></div>
+    <app-monstercard [detail]="monsterDet"></app-monstercard>
+</ng-container> -->
+
+<!-- <app-monstercard *ngFor="let monsterDet of (monsterDetails | async) | filter: filterWithDebounce: 'name'" [detail]="monsterDet"></app-monstercard> -->
+<!-- <app-monstercard *ngFor="let monsterDet of monsterDetails" [detail]="monsterDet"></app-monstercard> -->
